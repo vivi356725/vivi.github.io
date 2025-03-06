@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Vida</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8e0e6;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 50px;
+            color: #d9006c;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            margin-top: 50px;
+        }
+        h2 {
+            font-size: 40px;
+            color: #000;
+            font-style: italic;
+            margin-top: 20px;
+        }
+        .acrostico {
+            font-size: 24px;
+            font-style: italic;
+            color: #d9006c;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .bio-container, .vision-container, .mision-container, .metas-container, .aliados-container, .valores-container, .foda-container, .estrategias-container {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hidden */
+            font-family: 'Georgia', serif;
+            color: #4f4f4f;
+            font-size: 18px;
+        }
+        .image {
+            width: 200px;
+            height: auto;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            border: 3px solid #d9006c;
+            border-radius: 10px;
+        }
+        .image2 {
+            width: 250px;
+            height: auto;
+            margin-top: 20px;
+            border: 3px solid #d9006c;
+            border-radius: 10px;
+        }
+        .asesor {
+            font-size: 20px;
+            color: #d9006c;
+            margin-top: 20px;
+            border-top: 2px solid #d9006c;
+            padding-top: 10px;
+        }
+        button {
+            background-color: #d9006c;
+            color: white;
+            font-size: 18px;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #b70059;
+        }
+        .marzo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+            color: #d9006c;
+        }
+        .vision-container, .mision-container, .metas-container, .aliados-container, .valores-container, .foda-container, .estrategias-container, .agradecimientos-container, .metas-alcanzadas-container {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #d9006c;
+            border-radius: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    .conclusion-container {
+            display: none;
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-family: 'Georgia', serif;
+            color: #4f4f4f;
+            font-size: 18px;
+            text-align: center;
+        }
+        .metas-alcanzadas-container {
+            display: none; /* Initially hidden */
+            font-family: 'Georgia', serif;
+            font-size: 18px;
+            color: #4f4f4f;
+            text-align: left;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #fff;
+            border: 2px solid #d9006c;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="marzo">
+        <p>Marzo 2025</p>
+    </div>
+
+    <!-- Título "Proyecto de Vida" -->
+    <h1>Proyecto de Vida</h1>
+
+    <!-- Nombre del Asesor -->
+    <div class="asesor">
+        <p>Asesor: Ronal Estuardo Soto Solloza</p>
+    </div>
+
+    <!-- Nombre de Linda Rosaura Cifuentes Orellana -->
+    <h2>Linda Rosaura Cifuentes Orellana</h2>
+
+    <!-- Acrostico -->
+    <div class="acrostico">
+        <p><strong>L</strong>- Amable</p>
+        <p><strong>I</strong>- Inteligente</p>
+        <p><strong>N</strong>- Noble</p>
+        <p><strong>D</strong>- Determinada</p>
+        <p><strong>A</strong>- Afectuosa</p>
+    </div>
+
+    <!-- Segunda imagen debajo de "Acrostico" -->
+    <img class="image2" src="https://i.imgur.com/saAyeqI.jpeg" alt="Otra imagen">
+
+    <!-- Título ¿Quién soy? -->
+    <h2>¿Quién soy yo?</h2>
+    <p><em>Linda es Felicidad, Amor, Melancolía, Inglés, Crear música, Leer, Cocinar, Memorizar, Escuchar, Familia, Amigos, Desesperada, Olvidadiza, Tímida</em></p>
+
+    <!-- Botón para ver la biografía -->
+    <button onclick="mostrarBio()">Ver Biografía Completa</button>
+
+    <!-- Biografía Oculta -->
+    <div class="bio-container" id="bio">
+        <h3>Biografía:</h3>
+        <p><strong>Infancia (2008-2012):</strong> Nací el 20 de junio de 2008. Dije mi primera palabra ("papá") y di mis primeros pasos a los 9 meses. Me gustaba bailar, cantar y pintar, además aprendí a montar bicicleta, aunque tuve un pequeño accidente. Empecé el colegio y disfruté de disfrazarme y participar en eventos.</p>
+         <img src="https://i.imgur.com/cRZpLRI.jpeg" alt="Imagen Infancia" class="image2">
+
+        <p><strong>Niñez (2013-2017):</strong> Comencé la primaria a los 8 años y, aunque lloré por no saber leer, me adapté rápido. A los 9, me enseñaron a dibujar digitalmente y me interesé por la computación.</p>
+        <img src="https://i.imgur.com/b9EEVhv.jpeg" alt="Imagen Niñez" class="image2">
+
+        <p><strong>Adolescencia (2018-2023):</strong> Durante la pandemia, estuve en clases virtuales, pasé más tiempo con mi familia y empecé a leer, dibujar y ver streams. En 2023, me gradué del Liceo Monteflor.</p>
+        <img src="https://i.imgur.com/uSHvUnK.jpeg" alt="Imagen Adolescencia" class="image2">
+
+        <p><strong>Juventud (2024-2025):</strong> En 2024, comencé en el Liceo Compu-Market, hice nuevos amigos y este año estoy en mi segundo año de carrera, aprendiendo inglés y leyendo más.</p>
+        <img src="https://i.imgur.com/Z2GdBbj.jpeg" alt="Imagen Juventud" class="image2">
+    </div>
+
+    <!-- Primera imagen -->
+    <img class="image" src="https://i.imgur.com/EzNRJ11.jpeg" alt="Mi imagen">
+
+    <!-- Botón para ver la visión -->
+    <button onclick="mostrarVision()">Ver Visión</button>
+
+    <!-- Visión Oculta -->
+    <div class="vision-container" id="vision">
+        <h3>Mi Visión:</h3>
+        <p>Me visualizo como una profesional en Derecho, con experiencia, trabajando en el gobierno, al lado de mi familia. También me imagino rodeada de una familia unida, disfrutando de relaciones estables y saludables. En el ámbito personal, me comprometo a cuidar mi bienestar físico y emocional. Además, continuaré participando en actividades religiosas y apoyando a mi familia en su camino espiritual.</p>
+    </div>
+
+    <!-- Botón para ver la misión -->
+    <button onclick="mostrarMision()">Ver Misión</button>
+
+    <!-- Misión Oculta -->
+    <div class="mision-container" id="mision">
+        <h3>Mi Misión:</h3>
+        <p>Mi misión es ser una persona honesta y bondadosa, siempre guiada por los principios de Dios. Quiero ser una hija de Dios comprometida y nunca apartarme de Él. Además, aspiro a convertirme en una profesional en el área de Derecho, ayudando a quienes lo necesiten y marcando la diferencia en la vida de los demás.</p>
+    </div>
+
+    <!-- Botón para ver las metas -->
+    <button onclick="mostrarMetas()">Ver Metas</button>
+
+    <!-- Metas Ocultas -->
+    <div class="metas-container" id="metas">
+        <h3>Mis Metas:</h3>
+
+        <p><strong>Académica:</strong></p>
+        <ul>
+            <li><strong>Corto plazo:</strong> Tener buen promedio al iniciar mis prácticas e iniciar un curso.</li>
+            <li><strong>Medio plazo:</strong> Haber avanzado en la universidad y aprender más idiomas además de inglés.</li>
+            <li><strong>Largo plazo:</strong> Graduarme con maestría y saber más idiomas.</li>
+        </ul>
+
+        <p><strong>Familiar:</strong></p>
+        <ul>
+            <li><strong>Corto plazo:</strong> Tener buena comunicación y convivir más.</li>
+            <li><strong>Medio plazo:</strong> Seguir unidos y apoyarnos en lo que necesitemos.</li>
+            <li><strong>Largo plazo:</strong> Tener mi propia familia y seguir conviviendo todos juntos.</li>
+        </ul>
+
+        <p><strong>Espiritual:</strong></p>
+        <ul>
+            <li><strong>Corto plazo:</strong> Seguir en los caminos de Dios y asistiendo a la iglesia.</li>
+            <li><strong>Medio plazo:</strong> Estudiar más de la Biblia y participar más.</li>
+            <li><strong>Largo plazo:</strong> Empezar a enseñar lo que he aprendido.</li>
+        </ul>
+
+        <p><strong>En lo económico:</strong></p>
+        <ul>
+            <li><strong>Corto plazo:</strong> Empezar a ahorrar y tener más orden con las cosas que compro.</li>
+            <li><strong>Medio plazo:</strong> Tener un buen trabajo, ahorros y economía estable por mí misma.</li>
+            <li><strong>Largo plazo:</strong> Ser más estable y ayudar a mi familia.</li>
+        </ul>
+
+        <p><strong>Emocional:</strong></p>
+        <ul>
+            <li><strong>Corto plazo:</strong> Tener más control y no estar tan preocupada.</li>
+            <li><strong>Medio plazo:</strong> Tener más apoyo y sentirme bien manejando mis emociones.</li>
+            <li><strong>Largo plazo:</strong> Tener estabilidad y saber controlar bien mis emociones.</li>
+        </ul>
+
+        <p><strong>Social:</strong></p>
+        <ul>
+            <li><strong>Corto plazo:</strong> Ser más amable.</li>
+            <li><strong>Medio plazo:</strong> Mejorar las relaciones con mis conocidos y ser más sociable.</li>
+            <li><strong>Largo plazo:</strong> Que mis relaciones sean buenas y estables.</li>
+        </ul>
+
+        <p><strong>Física:</strong></p>
+        <ul>
+            <li><strong>Corto plazo:</strong> Empezar a comer más sano y hacer ejercicio en casa.</li>
+            <li><strong>Medio plazo:</strong> Tener un físico más sano.</li>
+            <li><strong>Largo plazo:</strong> Tener una rutina y dieta según lo necesario.</li>
+        </ul>
+    </div>
+
+    <!-- Botón para ver los aliados -->
+    <button onclick="mostrarAliados()">Ver Aliados</button>
+
+    <!-- Aliados Ocultos -->
+    <div class="aliados-container" id="aliados">
+        <h3>Mis Aliados:</h3>
+        <img src="https://i.imgur.com/9ejofam.jpeg" alt="Aliados">
+    </div>
+
+    <!-- Botón para ver los valores -->
+    <button onclick="mostrarValores()">Ver Valores</button>
+
+    <!-- Valores Ocultos -->
+    <div class="valores-container" id="valores">
+        <h3>Mis Valores:</h3>
+        <img src="https://i.imgur.com/DJpC9fR.jpeg" alt="Valores">
+    </div>
+
+    <!-- Botón para ver el FODA -->
+    <button onclick="mostrarFODA()">Ver FODA</button>
+
+    <!-- FODA Oculto -->
+    <div class="foda-container" id="foda">
+        <h3>FODA:</h3>
+        <img src="https://i.imgur.com/hgicVSk.jpeg" alt="FODA">
+    </div>
+
+    <!-- Botón para ver las estrategias -->
+    <button onclick="mostrarEstrategias()">Ver Estrategias</button>
+
+    <!-- Estrategias Ocultas -->
+    <div class="estrategias-container" id="estrategias">
+        <h3>Mis Estrategias:</h3>
+        <ul>
+            <li><strong>Académica:</strong> Aprender más idiomas además de inglés.</li>
+            <li><strong>Familiar:</strong> Convivir más tiempo con mi familia.</li>
+            <li><strong>Espiritual:</strong> Asistir con más frecuencia a la iglesia y participar activamente.</li>
+            <li><strong>Emocional:</strong> Dedicar más tiempo para mi bienestar emocional.</li>
+            <li><strong>Social:</strong> Ampliar mi círculo social con personas positivas.</li>
+            <li><strong>Física:</strong> Mejorar mis hábitos alimenticios y cuidar mejor de mi salud.</li>
+        </ul>
+    </div>
+
+    <button onclick="mostrarConclusion()">Ver Conclusión</button>
+
+    <!-- Contenido de Conclusión -->
+    <div class="conclusion-container" id="conclusion">
+        <p>Agradezco a todos los que me han ayudado a crecer como persona y me han apoyado. Este proyecto es un paso hacia la construcción de mi futuro, y continuaré trabajando en mis metas para alcanzar el éxito.</p>
+    </div>
+    <button onclick="mostrarAgradecimientos()">Ver Agradecimientos</button>
+
+    <!-- Agradecimientos Ocultos -->
+    <div class="agradecimientos-container" id="agradecimientos">
+        <h3>Agradecimientos:</h3>
+        <p>Agradezco a mi familia por su apoyo incondicional, a mis amigos por su compañía y a mi asesor, Ronal Estuardo Soto Solloza, por guiarme en este proceso de reflexión personal.</p>
+    </div>
+    <button onclick="mostrarMetasAlcanzadas()">Ver Metas Alcanzadas</button>
+<div class="metas-alcanzadas-container" id="metas-alcanzadas">
+        <h3>Mis Metas Alcanzadas:</h3>
+        <p><strong>1.Académica:</strong> Empezar un curso de ingles<p>
+            <div class="center-image">
+            <img src="https://i.imgur.com/u2ed3zt.png" alt="Imagen Curso" alt="Imagen Centrada">
+</div>
+        <p><strong>2.Emocional:</strong> Leer más</p>
+        <div class="center-image">
+        <img src="https://i.imgur.com/T6Y07jL.jpeg" alt="Imagen Leer" alt="Imagen Centrada">
+</div>
+        <p><strong>3. Social:</strong> Aprender a manejar</p>
+        <div class="center-image">
+        <img src="https://i.imgur.com/9yhtucw.jpeg" alt="Imagen manejar" alt="Imagen Centrada">
+</div>
+    </div>
+    <script>
+        function mostrarBio() {
+            var bio = document.getElementById("bio");
+            bio.style.display = bio.style.display === "block" ? "none" : "block";
+        }
+        function mostrarVision() {
+            var vision = document.getElementById("vision");
+            vision.style.display = vision.style.display === "block" ? "none" : "block";
+        }
+        function mostrarMision() {
+            var mision = document.getElementById("mision");
+            mision.style.display = mision.style.display === "block" ? "none" : "block";
+        }
+        function mostrarMetas() {
+            var metas = document.getElementById("metas");
+            metas.style.display = metas.style.display === "block" ? "none" : "block";
+        }
+        function mostrarAliados() {
+            var aliados = document.getElementById("aliados");
+            aliados.style.display = aliados.style.display === "block" ? "none" : "block";
+        }
+        function mostrarValores() {
+            var valores = document.getElementById("valores");
+            valores.style.display = valores.style.display === "block" ? "none" : "block";
+        }
+        function mostrarFODA() {
+            var foda = document.getElementById("foda");
+            foda.style.display = foda.style.display === "block" ? "none" : "block";
+        }
+        function mostrarEstrategias() {
+            var estrategias = document.getElementById("estrategias");
+            estrategias.style.display = estrategias.style.display === "block" ? "none" : "block";
+        }
+        function mostrarConclusion() { var conclusion = document.getElementById("conclusion"); conclusion.style.display = conclusion.style.display === "block" ? "none" : "block"; 
+        }
+        function mostrarAgradecimientos() {
+            var agradecimientos = document.getElementById("agradecimientos");
+            agradecimientos.style.display = agradecimientos.style.display === "block" ? "none" : "block";
+        }
+        function mostrarMetasAlcanzadas() {
+            var metasAlcanzadas = document.getElementById("metas-alcanzadas");
+            metasAlcanzadas.style.display = metasAlcanzadas.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
